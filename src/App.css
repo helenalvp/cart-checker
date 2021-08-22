@@ -1,0 +1,124 @@
+:root {
+  --primary-color: black;
+  --secondary-color: rgb(240, 121, 121);
+  --hover-color: rgba(128, 128, 128, 0.151);
+  --text-hover-color: rgb(255, 255, 255);
+}
+body {
+  background-color: whitesmoke;
+  width: 100%;
+}
+/* footer */
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 100px; /* Height of the footer */
+  background: black;
+  color: whitesmoke;
+}
+i,
+.social {
+  color: white;
+}
+
+/* Home */
+.main {
+  height: 60vh;
+  overflow-y: auto;
+}
+.list-menu {
+  color: Black;
+  font-size: 22px;
+}
+
+.skills-logo {
+  height: 80px;
+}
+.icon-menu {
+  height: 20px;
+  padding-right: 5px;
+}
+
+/* Navbar */
+i:hover {
+  color: var(--secondary-color);
+}
+.navlink:hover {
+  color: var(--text-hover-color);
+}
+button:hover {
+  /* color: var(--secondary-color); */
+  background-color: var(--hover-color);
+  color: var(--text-hover-color);
+}
+
+/* Code */
+.drop-height {
+  height: 75vh;
+  overflow-y: auto;
+}
+
+.drop-down {
+  height: 40vh;
+  overflow-y: auto;
+}
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+  .skills-logo {
+    height: 50px;
+  }
+  .list-menu {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .drop-height {
+    height: 60vh;
+    overflow-y: auto;
+  }
+}
+
+/* default */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* end of default */
