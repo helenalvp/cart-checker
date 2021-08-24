@@ -10,10 +10,8 @@ import List from "@material-ui/core/List";
 import cssLogo from "../assets/images/technologies/css.png";
 import htmlLogo from "../assets/images/technologies/html.png";
 import jsLogo from "../assets/images/technologies/js.png";
-import sqlLogo from "../assets/images/technologies/microsoftsql.png";
-import postgresqlLogo from "../assets/images/technologies/postgresql.png";
-import pythonLogo from "../assets/images/technologies/python.png";
 import reactLogo from "../assets/images/technologies/react.png";
+import bootstrapLogo from "../assets/images/technologies/bootstrap-logo.svg";
 
 class Home extends Component {
   render() {
@@ -36,9 +34,11 @@ class Home extends Component {
               alignItems="stretch"
             >
               <Grid item xs={12}>
-                <h1 className="fancy-font">App Name</h1>
-                <h4 className="lead">
-                  This is a description of the app and what it does
+                <h1 className="fancy-font">CartChecker</h1>
+                <h4 className="lead app-info">
+                  Check the cost of your haul before seeing the cashier! Use
+                  this as you add items to your cart to know how much you're
+                  going to pay in total, including taxes!
                 </h4>
               </Grid>
               <div className="main">
@@ -46,8 +46,13 @@ class Home extends Component {
                   <List>
                     {/* List of skills used */}
                     <ListItem>
-                      <ListItemIcon>
-                        <Checkbox edge="start" checked={true} disableRipple />
+                      <ListItemIcon className="check">
+                        <Checkbox
+                          className="check"
+                          edge="start"
+                          checked={true}
+                          disableRipple
+                        />
                       </ListItemIcon>
                       <ListItemText
                         disableTypography
@@ -92,28 +97,22 @@ class Home extends Component {
                       <ListItemText
                         disableTypography
                         className="list-menu"
-                        primary="If/Else/statements"
+                        primary="Javascript If/Else/statements"
                       />
                     </ListItem>
                   </List>
                 </Grid>
                 {/* Icons */}
                 <Grid>
-                  <img src={cssLogo} alt="css" className="skills-logo" />
-                  <img src={htmlLogo} alt="html" className="skills-logo" />
-                  <img src={jsLogo} alt="js" className="skills-logo" />
-                  <img
-                    src={sqlLogo}
-                    alt="microsoft sql"
-                    className="skills-logo"
-                  />
-                  <img
-                    src={postgresqlLogo}
-                    alt="postgresql"
-                    className="skills-logo"
-                  />
-                  <img src={pythonLogo} alt="python" className="skills-logo" />
                   <img src={reactLogo} alt="react" className="skills-logo" />
+                  <img src={jsLogo} alt="js" className="skills-logo" />
+                  <img src={htmlLogo} alt="html" className="skills-logo" />
+                  <img
+                    src={bootstrapLogo}
+                    alt="bootstrap"
+                    className="skills-logo bootstrap-logo"
+                  />
+                  <img src={cssLogo} alt="css" className="skills-logo" />
                 </Grid>
               </div>
             </Grid>

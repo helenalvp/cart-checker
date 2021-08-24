@@ -77,6 +77,7 @@ class NavBar extends React.Component {
               CartChecker
             </span>
             <Tab label="Home" className="text-white" {...this.a11yProps(1)} />
+            {/* <Tab label="Home" className="text-white" {...this.a11yProps(1)} /> */}
             <Tab
               label="The App"
               className="text-white"
@@ -89,7 +90,7 @@ class NavBar extends React.Component {
             />
             <div className="justify-self-end">
               <Link
-                href="https://github.com/"
+                href="https://github.com/helenalvp/cart-checker"
                 target="_blank"
                 underline="none"
                 color="inherit"

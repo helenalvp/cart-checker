@@ -28,7 +28,7 @@ class Footer extends Component {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <i class="fab fa-linkedin fa-2x"></i>
+                  <i className="fab fa-linkedin fa-2x"></i>
                 </a>
               </div>
               <div className="col-sm-3 col-6 p-0 p-sm-2">
@@ -38,7 +38,7 @@ class Footer extends Component {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <i class="fab fa-github fa-2x"></i>
+                  <i className="fab fa-github fa-2x"></i>
                 </a>
               </div>
               <div className="col-sm-3 col-6 p-0 p-sm-2">
@@ -48,7 +48,7 @@ class Footer extends Component {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <i class="fab fa-twitter fa-2x"></i>
+                  <i className="fab fa-twitter fa-2x"></i>
                 </a>
               </div>
               <div className="col-sm-3 col-6 p-0 pb-2 p-sm-2">
@@ -58,7 +58,7 @@ class Footer extends Component {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <i class="fab fa-dev fa-2x"></i>
+                  <i className="fab fa-dev fa-2x"></i>
                 </a>
               </div>
             </div>

@@ -1,7 +1,7 @@
 import { Fragment, Component } from "react";
 import MoreInfoButton from "./MoreInfoButton";
 import appLogo from "../assets/images/applogo.png";
-import AppIndex from "./app-components/AppIndex";
+import CartCheckerMain from "./app-components/CartChecker";
 
 class TheApp extends Component {
   render() {
@@ -15,7 +15,7 @@ class TheApp extends Component {
         </div>
         {/* THIS IS WHERE I HAVE THE APP */}
         <div className="container app-container">
-          <AppIndex />
+          <CartCheckerMain />
         </div>
       </Fragment>
     );
