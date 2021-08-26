@@ -1,5 +1,5 @@
 import { Fragment, Component } from "react";
-import CodeSnippet from "./CodeSnippet";
+import CodeSnippet from "../CodeSnippet";
 import CodeInfo from "./CodeInfo";
 
 import Accordion from "@material-ui/core/Accordion";

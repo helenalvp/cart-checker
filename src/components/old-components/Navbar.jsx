@@ -7,7 +7,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
-import Home from "./Home";
+import Home from "../Home";
 import TheApp from "./TheApp";
 import TheCode from "./TheCode";
 
