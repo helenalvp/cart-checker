@@ -25,8 +25,21 @@ export default function MoreInfoButton() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <h4>Description</h4>
-      <p>This is what the app does and how it works</p>
+      <h4 className="my-5">Welcome to the Cart Checker!</h4>
+      <div class="app-summary my-5">
+        <p className="my-2">
+          This is designed to be a companion for your shopping trips.
+        </p>
+        <p className="my-2 py-3">
+          Just have it out while you're shopping, adding every item and its
+          price to your cart.
+        </p>
+        <p>
+          While you shop, you can figure out exactly how much you have in your
+          cart and how much you'll be paying in taxes before you hit the
+          register!
+        </p>
+      </div>
     </div>
   );
 
@@ -34,7 +47,12 @@ export default function MoreInfoButton() {
     <div>
       {["More Info"].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <Button
+            onClick={toggleDrawer(anchor, true)}
+            className="more-info-btn"
+          >
+            {anchor}
+          </Button>
           <Drawer
             anchor={anchor}
             open={state[anchor]}
