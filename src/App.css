@@ -1,6 +1,6 @@
 :root {
   --primary-color: black;
-  --secondary-color: rgb(240, 121, 121);
+  --secondary-color: green;
   --hover-color: rgba(128, 128, 128, 0.151);
   --text-hover-color: rgb(255, 255, 255);
 }
