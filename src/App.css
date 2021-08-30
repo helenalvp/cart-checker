@@ -56,6 +56,10 @@ i,
   padding-right: 5px;
 }
 
+.drawer.app-title {
+  color: var(--secondary-color);
+}
+
 /* Navbar */
 i:hover {
   color: var(--secondary-color);

@@ -19,13 +19,14 @@ class CartChecker extends Component {
 
   updateTaxes = (newTax) => {
     // this is going to change the taxes total and the total
-    var tax = newTax / 100;
-    var newTaxesTotal = this.state.subTotal * tax;
-    var newTotal = this.state.subTotal + newTaxesTotal;
+    var tax = Number(newTax) / 100;
+    var subTotal = Number(this.state.subTotal);
+    var newTaxesTotal = subTotal * tax;
+    var newTotal = subTotal + newTaxesTotal;
 
     this.setState({
-      taxesTotal: newTaxesTotal.toFixed(2),
-      total: newTotal.toFixed(2),
+      taxesTotal: Number(newTaxesTotal).toFixed(2),
+      total: Number(newTotal).toFixed(2),
       tax,
     });
   };
@@ -39,37 +40,48 @@ class CartChecker extends Component {
     var newTaxTotal = 0;
     var newTotal = 0;
     var itemsArr = this.state.items;
-    console.log(itemsArr.length, itemsArr, true);
-    if (itemsArr.length > 0) {
-      for (var i = 0; i <= itemsArr.length - 1; i++) {
-        var item = itemsArr[i];
-        console.log("this is the item being looped", item);
-        console.log(item.cost, isNaN(item.cost), typeof item.cost);
-        var cost = item.cost;
+    console.log(
+      typeof newSubTotal,
+      typeof newTotal,
+      typeof tax,
+      typeof newTaxTotal
+    );
 
-        newSubTotal += cost;
+    for (var i = 0; i <= itemsArr.length - 1; i++) {
+      var item = itemsArr[i];
+      console.log("this is the item being looped", item);
+      console.log(item.cost, isNaN(item.cost), typeof item.cost);
+      var cost = item.cost;
 
-        if (item.taxable === true) {
-          newTaxTotal += cost * tax;
-        }
+      newSubTotal += cost;
+
+      if (item.taxable === true) {
+        newTaxTotal += cost * tax;
       }
-
-      newTotal = newSubTotal + newTaxTotal;
-
-      this.setState(
-        {
-          subTotal: newSubTotal.toFixed(2),
-          taxesTotal: newTaxTotal.toFixed(2),
-          total: newTotal.toFixed(2),
-        },
-        () =>
-          console.log(
-            `this should update the totals`,
-            this.state,
-            this.state.items
-          )
-      );
     }
+
+    newTotal = newSubTotal + newTaxTotal;
+    console.log(typeof newSubTotal, typeof taxesTotal, typeof total);
+    console.log(
+      typeof newSubTotal,
+      typeof newTotal,
+      typeof tax,
+      typeof newTaxTotal
+    );
+
+    this.setState(
+      {
+        subTotal: Number(newSubTotal).toFixed(2),
+        taxesTotal: Number(newTaxTotal).toFixed(2),
+        total: Number(newTotal).toFixed(2),
+      },
+      () =>
+        console.log(
+          `this should update the totals`,
+          this.state,
+          this.state.items
+        )
+    );
   };
 
   addInTable = (itemObj) => {

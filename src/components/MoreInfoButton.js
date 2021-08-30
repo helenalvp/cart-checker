@@ -25,8 +25,8 @@ export default function MoreInfoButton() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <h4 className="my-5">Welcome to the Cart Checker!</h4>
-      <div class="app-summary my-5">
+      <h4 className="my-5 drawer app-title">Welcome to the Cart Checker!</h4>
+      <div className="app-summary my-5 drawer">
         <p className="my-2">
           This is designed to be a companion for your shopping trips.
         </p>

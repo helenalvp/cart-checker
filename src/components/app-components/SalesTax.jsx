@@ -7,7 +7,7 @@ class SalesTax extends Component {
   };
 
   changeSalesTax = (e) => {
-    let salesTax = e.currentTarget.value;
+    let salesTax = Number(e.currentTarget.value);
     let salesTaxValidClass =
       0 <= salesTax && salesTax <= 15
         ? this.props.updateTaxTotal(salesTax)

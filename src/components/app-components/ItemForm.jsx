@@ -23,7 +23,7 @@ class ItemForm extends Component {
       }
     }
     if (inputName === "itemCost") {
-      inputValue = parseInt(inputValue);
+      inputValue = Number(inputValue);
     }
     //change values to be string, boolean, and number accordingly
     this.setState((prevState) => {
@@ -35,6 +35,7 @@ class ItemForm extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
+
     this.state.item.itemCost > 0
       ? this.props.onAdd(this.state.item)
       : this.props.onError();
