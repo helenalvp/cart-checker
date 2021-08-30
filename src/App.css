@@ -5,8 +5,11 @@
   --text-hover-color: rgb(255, 255, 255);
   --bg-color: #fffff0;
 }
+html {
+  background-color: var(--bg-color);
+}
 body {
-  background-color: whitesmoke;
+  background-color: var(--bg-color);
   width: 100%;
 }
 .hide-text {
@@ -20,11 +23,11 @@ body {
   width: 100%;
   min-height: 100px; /* Height of the footer */
   background: black;
-  color: whitesmoke;
+  color: var(--bg-color);
 }
 i,
 .social {
-  color: white;
+  color: var(--bg-color);
 }
 
 /* Home */

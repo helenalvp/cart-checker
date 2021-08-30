@@ -13,26 +13,29 @@ class ItemForm extends Component {
   onChange = (e) => {
     var inputName = e.currentTarget.id;
     var inputValue = e.currentTarget.value;
-    console.log(inputName, inputValue);
 
+    //making checked string into boolean
+    if (inputName === "isTaxable") {
+      if (inputValue === "true") {
+        inputValue = true;
+      } else {
+        inputValue = false;
+      }
+    }
     //change values to be string, boolean, and number accordingly
-    this.setState(
-      (prevState) => {
-        var item = { ...prevState.item };
-        item[inputName] = inputValue;
-        console.log(inputName, inputValue, item);
+    this.setState((prevState) => {
+      var item = { ...prevState.item };
+      item[inputName] = inputValue;
 
-        return { item };
-      },
-      () => console.log(this.state)
-    );
+      return { item };
+    });
   };
 
   onSubmit = (e) => {
     e.preventDefault();
-    console.log(
-      this.state.item.itemCost > 0 ? "Item added!" : "Item will not be added"
-    );
+    this.state.item.itemCost > 0
+      ? this.props.onAdd(this.state.item)
+      : this.props.onError();
   };
   render() {
     return (

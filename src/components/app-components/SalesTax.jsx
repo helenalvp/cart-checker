@@ -8,7 +8,7 @@ class SalesTax extends Component {
 
   changeSalesTax = (e) => {
     let salesTax = parseInt(e.currentTarget.value);
-    let salesTaxValidClass = 0 <= salesTax && salesTax <= 10 ? "" : "warning";
+    let salesTaxValidClass = 0 <= salesTax && salesTax <= 15 ? "" : "warning";
 
     this.setState({ salesTax, salesTaxValidClass });
     //once this changes to a valid number, so does everyhting else in the whole total on the total tax
@@ -40,7 +40,7 @@ class SalesTax extends Component {
           <span className="percent-sign">%</span>
 
           <span className={`mx-2 form-text ${this.state.salesTaxValidClass}`}>
-            Add percent between 0 - 10
+            Add percent between 0 - 15
           </span>
         </div>
       </div>

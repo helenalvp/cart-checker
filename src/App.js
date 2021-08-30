@@ -1,6 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CartChecker from "./components/app-components/CartChecker";
 import MoreInfoButton from "./components/MoreInfoButton";
@@ -21,7 +21,7 @@ function App() {
           <CartChecker />
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
