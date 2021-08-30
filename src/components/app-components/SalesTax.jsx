@@ -7,8 +7,11 @@ class SalesTax extends Component {
   };
 
   changeSalesTax = (e) => {
-    let salesTax = parseInt(e.currentTarget.value);
-    let salesTaxValidClass = 0 <= salesTax && salesTax <= 15 ? "" : "warning";
+    let salesTax = e.currentTarget.value;
+    let salesTaxValidClass =
+      0 <= salesTax && salesTax <= 15
+        ? this.props.updateTaxTotal(salesTax)
+        : "warning";
 
     this.setState({ salesTax, salesTaxValidClass });
     //once this changes to a valid number, so does everyhting else in the whole total on the total tax
@@ -32,7 +35,7 @@ class SalesTax extends Component {
             id="salesTax"
             className={`form-control ${this.state.salesTaxValidClass}`}
             aria-describedby="sales-tax is-invalid"
-            value={this.state.salesTax}
+            value={this.state.salesTax || ""}
             onChange={this.changeSalesTax}
           />
         </div>

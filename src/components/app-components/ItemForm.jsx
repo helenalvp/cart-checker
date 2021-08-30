@@ -22,11 +22,13 @@ class ItemForm extends Component {
         inputValue = false;
       }
     }
+    if (inputName === "itemCost") {
+      inputValue = parseInt(inputValue);
+    }
     //change values to be string, boolean, and number accordingly
     this.setState((prevState) => {
       var item = { ...prevState.item };
       item[inputName] = inputValue;
-
       return { item };
     });
   };
@@ -90,7 +92,7 @@ class ItemForm extends Component {
                     className="form-control"
                     id="itemCost"
                     placeholder="Cost"
-                    value={this.state.item.itemCost}
+                    value={this.state.item.itemCost || ""}
                     onChange={this.onChange}
                     required
                   />

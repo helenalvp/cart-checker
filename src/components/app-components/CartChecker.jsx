@@ -13,14 +13,63 @@ class CartChecker extends Component {
     total: 0,
     items: [],
     timesClicked: 0,
+    totalThatNeedsToBeTaxed: 0,
+    tax: 0.0509,
   };
 
-  updateTaxes = () => {
+  updateTaxes = (newTax) => {
     // this is going to change the taxes total and the total
+    var tax = newTax / 100;
+    var newTaxesTotal = this.state.subTotal * tax;
+    var newTotal = this.state.subTotal + newTaxesTotal;
+
+    this.setState({
+      taxesTotal: newTaxesTotal.toFixed(2),
+      total: newTotal.toFixed(2),
+      tax,
+    });
   };
 
-  updateTotal = () => {
-    // this is going ot update the sub total and the total
+  updateTotals = () => {
+    // this is going to update the sub total and the total
+    console.log("here is where i update totals");
+    var newSubTotal = 0;
+    var tax = this.state.tax;
+    console.log(tax);
+    var newTaxTotal = 0;
+    var newTotal = 0;
+    var itemsArr = this.state.items;
+    console.log(itemsArr.length, itemsArr, true);
+    if (itemsArr.length > 0) {
+      for (var i = 0; i <= itemsArr.length - 1; i++) {
+        var item = itemsArr[i];
+        console.log("this is the item being looped", item);
+        console.log(item.cost, isNaN(item.cost), typeof item.cost);
+        var cost = item.cost;
+
+        newSubTotal += cost;
+
+        if (item.taxable === true) {
+          newTaxTotal += cost * tax;
+        }
+      }
+
+      newTotal = newSubTotal + newTaxTotal;
+
+      this.setState(
+        {
+          subTotal: newSubTotal.toFixed(2),
+          taxesTotal: newTaxTotal.toFixed(2),
+          total: newTotal.toFixed(2),
+        },
+        () =>
+          console.log(
+            `this should update the totals`,
+            this.state,
+            this.state.items
+          )
+      );
+    }
   };
 
   addInTable = (itemObj) => {
@@ -38,7 +87,9 @@ class CartChecker extends Component {
     var addedItem = this.state.timesClicked + 1;
     //this also affects the totals....
 
-    this.setState({ items: updatedItemsArr, timesClicked: addedItem });
+    this.setState({ items: updatedItemsArr, timesClicked: addedItem }, () =>
+      this.updateTotals()
+    );
     //format the object name, and add to the array by changing state
   };
 
@@ -52,7 +103,7 @@ class CartChecker extends Component {
       }
     }
 
-    this.setState({ items: itemsArr });
+    this.setState({ items: itemsArr }, () => this.updateTotals());
   };
 
   showError = () => {
@@ -66,7 +117,7 @@ class CartChecker extends Component {
           <Grid item xs={12} className="sales-tax p-0 mt-3">
             <SalesTax
               //add on change/submit function to cart checker
-              onchange={this.updateTaxes}
+              updateTaxTotal={this.updateTaxes}
             />
           </Grid>
           <Grid

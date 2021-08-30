@@ -9,9 +9,9 @@ import appLogo from "./assets/images/applogo.png";
 function App() {
   return (
     <div className="App">
-      <div className="container-fluid border border-danger bg-danger bg-opacity-10 text-danger">
+      {/* <div className="container-fluid border border-danger bg-danger bg-opacity-10 text-danger">
         Cart still checking. Please come back later.
-      </div>
+      </div> */}
       <div className="content container-fluid border-bottom border-2 py-0 my-0 mt-5">
         <h4 className="py-0 my-0">
           <img src={appLogo} className="app-logo " alt="" />
