@@ -11,8 +11,8 @@ class TableDetail extends Component {
         </td>
         <th scope="row">1</th>
         <td className="t-detail pt-2">Milk</td>
-        <td class="t-detail pt-2">N</td>
-        <td class="t-detail pt-2">$2.00</td>
+        <td className="t-detail pt-2">N</td>
+        <td className="t-detail pt-2">$2.00</td>
       </tr>
     );
   }

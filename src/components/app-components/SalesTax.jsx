@@ -20,15 +20,15 @@ class SalesTax extends Component {
         className={`row pt-1 g-3 align-items-center ${this.state.salesTaxValidClass}`}
       >
         <div className="col-auto ">
-          <label for="sales-tax" className="col-form-label">
+          <label htmlFor="sales-tax" className="col-form-label">
             Sales Tax
           </label>
         </div>
         <div className="col-auto">
           <input
             type="number"
-            min="0"
-            max="10"
+            min={0}
+            max={15}
             id="salesTax"
             className={`form-control ${this.state.salesTaxValidClass}`}
             aria-describedby="sales-tax is-invalid"
@@ -38,7 +38,7 @@ class SalesTax extends Component {
         </div>
         <div className="col-auto mx-0 px-0 ">
           <span className="percent-sign">%</span>
-          {/* tooltop */}
+
           <span className={`mx-2 form-text ${this.state.salesTaxValidClass}`}>
             Add percent between 0 - 10
           </span>

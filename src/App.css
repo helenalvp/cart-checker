@@ -3,10 +3,15 @@
   --secondary-color: green;
   --hover-color: rgba(128, 128, 128, 0.151);
   --text-hover-color: rgb(255, 255, 255);
+  --bg-color: #fffff0;
 }
 body {
   background-color: whitesmoke;
   width: 100%;
+}
+.hide-text {
+  color: var(--bg-color);
+  visibility: hidden;
 }
 /* footer */
 #footer {
@@ -119,7 +124,7 @@ button.more-info-btn:hover {
 /* default */
 .App {
   text-align: center;
-  background-color: #fffff0;
+  background-color: var(--bg-color);
 }
 
 .App-logo {

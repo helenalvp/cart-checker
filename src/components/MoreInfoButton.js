@@ -45,13 +45,13 @@ export default function MoreInfoButton() {
 
   return (
     <div>
-      {["More Info"].map((anchor) => (
+      {["left"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button
             onClick={toggleDrawer(anchor, true)}
             className="more-info-btn"
           >
-            {anchor}
+            {"More Info"}
           </Button>
           <Drawer
             anchor={anchor}

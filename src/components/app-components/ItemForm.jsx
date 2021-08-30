@@ -41,7 +41,7 @@ class ItemForm extends Component {
           <div className="col-auto">
             <div className="row">
               <div className="col-4">
-                <label for="itemName" className="col-form-label">
+                <label htmlFor="itemName" className="col-form-label">
                   Item name
                 </label>
               </div>
@@ -68,7 +68,7 @@ class ItemForm extends Component {
                 value={!this.state.item.isTaxable}
                 onChange={this.onChange}
               />
-              <label className="form-check-label" for="isTaxable">
+              <label className="form-check-label" htmlFor="isTaxable">
                 Is taxable?
               </label>
             </div>
@@ -76,7 +76,7 @@ class ItemForm extends Component {
           <div className="col-auto">
             <div className="row">
               <div className="col-4">
-                <label className="col-form-label" for="itemCost">
+                <label className="col-form-label" htmlFor="itemCost">
                   Cost
                 </label>
               </div>
