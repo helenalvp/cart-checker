@@ -12,7 +12,7 @@ class Footer extends Component {
           spacing={3}
           className="pt-3 px-3 d-flex justify-content-between sticky-footer"
         >
-          <Grid item xs={6} className="text-lg-start py-0">
+          <Grid item xs={6} className="text-md-start py-0 footer-font-xs">
             <span>&copy;2021</span> Helena Vaquera | helenalvp@gmail.com
           </Grid>
           <Grid
@@ -21,7 +21,7 @@ class Footer extends Component {
             className="text-end col d-flex align-items-center p-0 justify-content-end"
           >
             <div className="row social px-2 pt-lg-3 pt-2">
-              <div className="col-sm-3 col-6 p-0 p-sm-2">
+              <div className="col-sm-3 col-6 p-sm-0 p-sm-2">
                 <a
                   className=""
                   href="https://linkedin.com/in/helenalvp/"
@@ -43,7 +43,7 @@ class Footer extends Component {
               </div>
               <div className="col-sm-3 col-6 p-0 p-sm-2">
                 <a
-                  className=""
+                  className="hide-link"
                   href="https://twitter.com/helenalvp"
                   target="_blank"
                   rel="noreferrer"
@@ -53,7 +53,7 @@ class Footer extends Component {
               </div>
               <div className="col-sm-3 col-6 p-0 pb-2 p-sm-2">
                 <a
-                  className=""
+                  className="hide-link"
                   href="https://dev.to/helenalvp"
                   target="_blank"
                   rel="noreferrer"

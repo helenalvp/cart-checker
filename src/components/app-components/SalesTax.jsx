@@ -39,11 +39,18 @@ class SalesTax extends Component {
             onChange={this.changeSalesTax}
           />
         </div>
-        <div className="col-auto mx-0 px-0 ">
+        <div className="col-auto mx-0 mt-sm-4 mt-0 px-0">
           <span className="percent-sign">%</span>
 
-          <span className={`mx-2 form-text ${this.state.salesTaxValidClass}`}>
+          <span
+            className={`mx-2 form-text form-text-md ${this.state.salesTaxValidClass}`}
+          >
             Add percent between 0 - 15
+          </span>
+          <span
+            className={`mx-2 form-text form-text-sm${this.state.salesTaxValidClass}`}
+          >
+            Add % between 0 - 15
           </span>
         </div>
       </div>

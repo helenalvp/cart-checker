@@ -33,24 +33,14 @@ class CartChecker extends Component {
 
   updateTotals = () => {
     // this is going to update the sub total and the total
-    console.log("here is where i update totals");
     var newSubTotal = 0;
     var tax = this.state.tax;
-    console.log(tax);
     var newTaxTotal = 0;
     var newTotal = 0;
     var itemsArr = this.state.items;
-    console.log(
-      typeof newSubTotal,
-      typeof newTotal,
-      typeof tax,
-      typeof newTaxTotal
-    );
 
     for (var i = 0; i <= itemsArr.length - 1; i++) {
       var item = itemsArr[i];
-      console.log("this is the item being looped", item);
-      console.log(item.cost, isNaN(item.cost), typeof item.cost);
       var cost = item.cost;
 
       newSubTotal += cost;
@@ -61,27 +51,12 @@ class CartChecker extends Component {
     }
 
     newTotal = newSubTotal + newTaxTotal;
-    console.log(typeof newSubTotal, typeof taxesTotal, typeof total);
-    console.log(
-      typeof newSubTotal,
-      typeof newTotal,
-      typeof tax,
-      typeof newTaxTotal
-    );
 
-    this.setState(
-      {
-        subTotal: Number(newSubTotal).toFixed(2),
-        taxesTotal: Number(newTaxTotal).toFixed(2),
-        total: Number(newTotal).toFixed(2),
-      },
-      () =>
-        console.log(
-          `this should update the totals`,
-          this.state,
-          this.state.items
-        )
-    );
+    this.setState({
+      subTotal: Number(newSubTotal).toFixed(2),
+      taxesTotal: Number(newTaxTotal).toFixed(2),
+      total: Number(newTotal).toFixed(2),
+    });
   };
 
   addInTable = (itemObj) => {
@@ -126,7 +101,11 @@ class CartChecker extends Component {
     return (
       <Fragment>
         <Grid container spacing={3} className="mb-5">
-          <Grid item xs={12} className="sales-tax p-0 mt-3">
+          <Grid
+            item
+            xs={12}
+            className="sales-tax p-0 mt-md-3 mt-2 mb-3 mb-md-0"
+          >
             <SalesTax
               //add on change/submit function to cart checker
               updateTaxTotal={this.updateTaxes}
@@ -149,49 +128,51 @@ class CartChecker extends Component {
             className="item-container border-bottom border-2 p-0 m-0"
           >
             {/* this is where the fixed container to have the items will be */}
-            <table className="table table-striped table-hover table-sm mb-0 pb-0 ">
-              <thead>
-                <tr>
-                  <th scope="col"></th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Taxable</th>
-                  <th scope="col">Cost</th>
-                </tr>
-              </thead>
-              <tbody>
-                <TableDetail
-                  itemsToMap={this.state.items}
-                  onDelete={this.deleteInTable}
-                />
-              </tbody>
-              <tfoot>
-                <tr>
-                  <td>Items: {this.state.items.length}</td>
-                  <td colSpan={3}></td>
-                </tr>
-                <tr>
-                  <td colSpan={2} className="hide-text">
-                    cartchecker
-                  </td>
-                  <td>Sub Total:</td>
-                  <td>$ {this.state.subTotal}</td>
-                </tr>
-                <tr>
-                  <td colSpan={2} className="hide-text">
-                    cartchecker
-                  </td>
-                  <td>Total Taxes:</td>
-                  <td>$ {this.state.taxesTotal}</td>
-                </tr>
-                <tr>
-                  <td colSpan={2} className="hide-text">
-                    cartchecker
-                  </td>
-                  <td>Total:</td>
-                  <td>$ {this.state.total}</td>
-                </tr>
-              </tfoot>
-            </table>
+            <div className="table-container">
+              <table className="table table-striped table-hover table-sm mb-0 pb-0 ">
+                <thead className="sticky-element">
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Taxable</th>
+                    <th scope="col">Cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <TableDetail
+                    itemsToMap={this.state.items}
+                    onDelete={this.deleteInTable}
+                  />
+                </tbody>
+                <tfoot className="sticky-element">
+                  <tr>
+                    <td>Items: {this.state.items.length}</td>
+                    <td colSpan={3}></td>
+                  </tr>
+                  <tr>
+                    <td colSpan={2} className="hide-text">
+                      cartchecker
+                    </td>
+                    <td>Sub Total:</td>
+                    <td>$ {this.state.subTotal}</td>
+                  </tr>
+                  <tr>
+                    <td colSpan={2} className="hide-text">
+                      cartchecker
+                    </td>
+                    <td>Total Taxes:</td>
+                    <td>$ {this.state.taxesTotal}</td>
+                  </tr>
+                  <tr>
+                    <td colSpan={2} className="hide-text">
+                      cartchecker
+                    </td>
+                    <td>Total:</td>
+                    <td>$ {this.state.total}</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
           </Grid>
         </Grid>
       </Fragment>

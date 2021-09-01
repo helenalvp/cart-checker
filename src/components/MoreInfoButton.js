@@ -49,7 +49,7 @@ export default function MoreInfoButton() {
         <React.Fragment key={anchor}>
           <Button
             onClick={toggleDrawer(anchor, true)}
-            className="more-info-btn"
+            className="more-info-btn mt-lg-3"
           >
             {"More Info"}
           </Button>

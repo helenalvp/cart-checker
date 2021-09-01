@@ -1,6 +1,7 @@
 :root {
   --primary-color: black;
-  --secondary-color: green;
+  --secondary-color: rgba(17, 168, 17, 0.938);
+  /* --secondary-color-var: rgba(13, 173, 13, 0.781); */
   --hover-color: rgba(128, 128, 128, 0.151);
   --text-hover-color: rgb(255, 255, 255);
   --bg-color: #fffff0;
@@ -22,7 +23,7 @@ body {
   bottom: 0;
   width: 100%;
   min-height: 100px; /* Height of the footer */
-  background: black;
+  background: var(--secondary-color);
   color: var(--bg-color);
 }
 i,
@@ -58,11 +59,18 @@ i,
 
 .drawer.app-title {
   color: var(--secondary-color);
+  overflow-wrap: break-word;
 }
 
 /* Navbar */
 i:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
+}
+i.fa-twitter:hover {
+  color: #1da1f2;
+}
+i.fa-linkedin:hover {
+  color: #2867b2;
 }
 .navlink:hover {
   color: var(--text-hover-color);
@@ -89,15 +97,67 @@ button:hover {
 }
 .app-summary {
   height: 100vh;
-  width: 35vh;
+  width: 55vh;
   font-size: 125%;
   overflow-x: hidden;
+  overflow-wrap: break-word;
 }
 .more-info-btn span:hover,
 button.more-info-btn:hover {
   color: green;
 }
+.form-text-sm,
+.form-check-sm {
+  display: none;
+}
+
+/* cart checker section */
+.table-container {
+  max-height: 50vh;
+  overflow-y: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+thead,
+tfoot,
+.sticky-element {
+  position: sticky;
+}
+/* table styling */
+
 /* Responsive */
+@media screen and (max-width: 300px) {
+  div.format-check-xs {
+    padding: 0px;
+    margin: 0px;
+  }
+  button.format-sm {
+    margin: 0px;
+    padding: 0px;
+  }
+  div.format-xs {
+    width: fit-content;
+  }
+  div.format-cost-xs {
+    width: 160px;
+    margin-left: 15px;
+    padding-left: 15px;
+  }
+  button.format-sm {
+    width: 35px;
+    margin: 0px;
+  }
+  div.footer-font-xs {
+    font-size: 12px;
+  }
+  a.hide-link {
+    display: none;
+    padding: 15px;
+    margin: 15px;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .skills-logo {
     height: 50px;
@@ -107,6 +167,38 @@ button.more-info-btn:hover {
   }
   .list-menu {
     font-size: 16px;
+  }
+  .percent-sign {
+    display: none;
+  }
+  .form-text-md,
+  .form-check-md {
+    display: none;
+  }
+  .form-text-sm,
+  .form-check-sm {
+    display: inline;
+  }
+  input.format-sm {
+    padding: 1px;
+    margin: 0px;
+  }
+  div.format-sm {
+    padding-left: 0px;
+    margin: 5px;
+  }
+  button.format-sm {
+    height: 30px;
+    font-size: 15px;
+    margin-right: 15px;
+    /* width: 60px; */
+  }
+  .drawer.app-title {
+    width: 60%;
+  }
+  .drawer {
+    width: 35vh;
+    font-size: 18px;
   }
 }
 
