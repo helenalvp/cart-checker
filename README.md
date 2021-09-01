@@ -147,7 +147,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@helenalvp](https://twitter.com/helenalvp) - helenalvp@gmail.com
+Helena L Vaquera - [@helenalvp](https://twitter.com/helenalvp) - helenalvp@gmail.com
 
 Project Link: [https://github.com/helenalvp/cart-checker](https://github.com/helenalvp/cart-checker)
 
