@@ -2,21 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** helenalvp, cart-checker, helenalvp, helenalvp@gmail.com, Cart Checker, This is designed to be a companion for your shopping trips.
-
-Just have it out while you're shopping, adding every item and its price to your cart.
-
-While you shop, you can figure out exactly how much you have in your cart and how much you'll be paying in taxes before you hit the register!
--->
+This lets you add and delete your items in your cart easliy and keeps a current tab on your total price and taxes, showing you the Sub Total, Tax Total, and Total of your shopping cart. Since taxes vary by state and area, There is a section where the user can change their Tax percentage for their area. The default is the average US tax percentage.
 
 <!-- PROJECT SHIELDS -->
 <!--
