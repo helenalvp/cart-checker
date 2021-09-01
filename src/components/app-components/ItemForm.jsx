@@ -117,7 +117,7 @@ class ItemForm extends Component {
             </div>
           </div>
 
-          <div className="col-auto m-0 p-0 format-xs">
+          <div className="col-auto m-0 p-0 format-xs p-md-2">
             <button
               type="submit"
               className="btn btn-sm btn-primary format-sm"

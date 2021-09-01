@@ -1,6 +1,8 @@
 import { Fragment, Component } from "react";
 import Grid from "@material-ui/core/Grid";
 import "./cartchecker.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import ItemForm from "./ItemForm";
 import SalesTax from "./SalesTax";
@@ -52,11 +54,27 @@ class CartChecker extends Component {
 
     newTotal = newSubTotal + newTaxTotal;
 
-    this.setState({
-      subTotal: Number(newSubTotal).toFixed(2),
-      taxesTotal: Number(newTaxTotal).toFixed(2),
-      total: Number(newTotal).toFixed(2),
-    });
+    this.setState(
+      {
+        subTotal: Number(newSubTotal).toFixed(2),
+        taxesTotal: Number(newTaxTotal).toFixed(2),
+        total: Number(newTotal).toFixed(2),
+      },
+      () => {
+        toast.success(
+          `List updated! Your current total is $${this.state.total}`,
+          {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+          }
+        );
+      }
+    );
   };
 
   addInTable = (itemObj) => {
@@ -94,12 +112,31 @@ class CartChecker extends Component {
   };
 
   showError = () => {
-    //add tostr error
-    console.log("Change could not be made, please try again");
+    toast.error("Item could not be added, please try again", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
   };
   render() {
     return (
       <Fragment>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss={false}
+          draggable
+          pauseOnHover={false}
+        />
+
         <Grid container spacing={3} className="mb-5">
           <Grid
             item
