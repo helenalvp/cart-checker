@@ -90,7 +90,7 @@ While you shop, you can figure out exactly how much you have in your cart and ho
 
 ## About The Project
 
-[![Product Name Screen Shot][/src/assets/images/app-screenshot.png]](https://helenalvp-cart-checker.netlify.app)
+[![Product Name Screen Shot](/src/assets/images/app-screenshot.png)
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
