@@ -30,7 +30,7 @@ This lets you add and delete your items in your cart easliy and keeps a current 
   <h3 align="center">Cart Checker</h3>
 
   <p align="center">
-    This is designed to be a companion for your shopping trips.
+This is designed to be a companion for your shopping trips.
 Just have it out while you're shopping, adding every item and its price to your cart.
 While you shop, you can figure out exactly how much you have in your cart and how much you'll be paying in taxes before you hit the register!
 <br />
