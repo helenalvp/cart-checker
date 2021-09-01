@@ -38,7 +38,7 @@ While you shop, you can figure out exactly how much you have in your cart and ho
 <br />
 <p align="center">
   <a href="https://github.com/helenalvp/cart-checker">
-    <img src="/src/assets/images/applogo.png" alt="Logo" width="80" height="80">
+    <img src="/src/assets/images/applogo-white.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Cart Checker</h3>
@@ -51,7 +51,7 @@ While you shop, you can figure out exactly how much you have in your cart and ho
 <a href="https://github.com/helenalvp/cart-checker"><strong>Explore the docs »</strong></a>
 <br />
 <br />
-<a href="https://github.com/helenalvp/cart-checker">View Demo</a>
+<a href="https://helenalvp-cart-checker.netlify.app">View Demo</a>
 ·
 <a href="https://github.com/helenalvp/cart-checker/issues">Report Bug</a>
 ·
@@ -90,7 +90,7 @@ While you shop, you can figure out exactly how much you have in your cart and ho
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][/src/assets/images/app-screenshot.png]](https://helenalvp-cart-checker.netlify.app)
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
@@ -105,7 +105,6 @@ While you shop, you can figure out exactly how much you have in your cart and ho
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 - [Bootstrap](https://getbootstrap.com/)
 - [Material UI](https://material-ui.com/)
-- [Toastr](https://www.npmjs.com/package/react-toastr)
 
 <!-- GETTING STARTED -->
 
@@ -178,8 +177,9 @@ Project Link: [https://github.com/helenalvp/cart-checker](https://github.com/hel
 ## Acknowledgements
 
 - [Font Awesome](https://fontawesome.com)
-<!-- - []()
-- []() -->
+- [Toastr](https://www.npmjs.com/package/react-toastr)
+- [Icons8](https://icons8.com/)
+<!--- []() -->
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
