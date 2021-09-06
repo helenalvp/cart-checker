@@ -6,6 +6,10 @@ import CartChecker from "./components/app-components/CartChecker";
 import MoreInfoButton from "./components/MoreInfoButton";
 import appLogo from "./assets/images/applogo.png";
 
+window.onbeforeunload = function () {
+  return "Data will be lost if you leave the page, are you sure?";
+};
+
 function App() {
   return (
     <div className="App">

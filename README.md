@@ -2,8 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This lets you add and delete your items in your cart easliy and keeps a current tab on your total price and taxes, showing you the Sub Total, Tax Total, and Total of your shopping cart. Since taxes vary by state and area, There is a section where the user can change their Tax percentage for their area. The default is the average US tax percentage.
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
