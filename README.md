@@ -20,16 +20,8 @@
   <h3 align="center">Cart Checker</h3>
 
   <p align="center">
-<br />
-<a href="https://github.com/helenalvp/cart-checker"><strong>Explore the docs »</strong></a>
-<br />
-<br />
-<a href="https://helenalvp-cart-checker.netlify.app">View Demo</a>
-·
-<a href="https://github.com/helenalvp/cart-checker/issues">Report Bug</a>
-·
-<a href="https://github.com/helenalvp/cart-checker/issues">Request Feature</a>
-
+    <br />
+    <a href="https://helenalvp-cart-checker.netlify.app">View Demo</a>
   </p>
 </p>
 
@@ -42,17 +34,17 @@
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
+<!--       </li>
+      <li>
+        <a href="#getting-started">Getting Started</a>
+        <ul>
+          <li><a href="#prerequisites">Prerequisites</a></li>
+          <li><a href="#installation">Installation</a></li>
+        </ul>
+      </li> -->
     <!-- <li><a href="#usage">Usage</a></li> -->
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+<!--     <li><a href="#roadmap">Roadmap</a></li> -->
+<!--     <li><a href="#contributing">Contributing</a></li> -->
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -77,7 +69,7 @@ While you shop, you can figure out exactly how much you have in your cart and ho
 
 <!-- GETTING STARTED -->
 
-## Getting Started
+<!-- ## Getting Started
 
 To get a local copy up and running follow these simple steps.
 
@@ -90,7 +82,7 @@ I used yarn for this. [For more information on how to set up yarn](https://class
   yarn --version
   ``` -->
 
-### Installation
+<!-- ### Installation
 
 1. Clone the repo
    ```sh
@@ -99,7 +91,7 @@ I used yarn for this. [For more information on how to set up yarn](https://class
 2. Install Yarn packages
    ```sh
    yarn install
-   ```
+   ``` -->
 
 <!-- USAGE EXAMPLES -->
 
@@ -111,12 +103,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_ --
 
 <!-- ROADMAP -->
 
-## Roadmap
+<!-- ## Roadmap
 
-See the [open issues](https://github.com/helenalvp/cart-checker/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/helenalvp/cart-checker/issues) for a list of proposed features (and known issues). -->
 
 <!-- CONTRIBUTING -->
-
+<!-- 
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -125,7 +117,7 @@ Contributions are what make the open source community such an amazing place to l
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+5. Open a Pull Request -->
 
 <!-- LICENSE -->
 
