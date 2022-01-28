@@ -1,7 +1,5 @@
 # Cart Checker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
