@@ -47,11 +47,6 @@ class SalesTax extends Component {
           >
             Add percent between 0 - 15
           </span>
-          <span
-            className={`mx-2 form-text form-text-sm${this.state.salesTaxValidClass}`}
-          >
-            Add % between 0 - 15
-          </span>
         </div>
       </div>
     );
