@@ -55,7 +55,8 @@
 
 ## About The Project
 
-<a href="https://helenalvp-cart-checker.netlify.app/"><img src="/src/assets/images/app-screenshot.PNG" alt="app screenshot"/></a>
+[<img src="/src/assets/images/app-screenshot.PNG">](https://youtu.be/7xC28XfDVvw)
+Click on the image to view the demo
 
 This is designed to be a companion for your shopping trips.
 Just have it out while you're shopping, adding every item and its price to your cart.
