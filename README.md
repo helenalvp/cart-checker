@@ -130,7 +130,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Helena L Vaquera - [@helenalvp](https://twitter.com/helenalvp) - helenalvp@gmail.com - [helenalvp.com](https://helenalvp.com)
+Helena L Vaquera <br>
+Email: helenalvp@gmail.com <br>
+Website: [helenalvp.com](https://helenalvp.com)
 
 Project Link: [https://github.com/helenalvp/cart-checker](https://github.com/helenalvp/cart-checker)
 
